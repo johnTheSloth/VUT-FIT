@@ -1,13 +1,13 @@
 VUT FIT Projekty
 ===================
 
- - Semestr č.2
+ - Semestr 2
 	 - **INC**
 		 - Přístupový terminál
 	 - **IOS**
 		 - dirstat
 		 - rollercoaster
- - Semestr č.3
+ - Semestr 3
 	 - **IAL**
 		 - DU1:
 			 - c201 - Jednosměrný lineární seznam
@@ -22,6 +22,12 @@ VUT FIT Projekty
 		 - Procesor BrainLove
 	 - **ISS**
 		 - Analýza signálu zvuku
- - Semestr č.4
+ - Semestr 4
 	 - **IPP**
 		 - XQR : XML Query
+		 - SYN : Zvýraznění syntaxe //TODO
+	 - **IPK** 
+		 - Klient/server aplikace pro přenos souborů //TODO
+		 - Klient pro výpočet matematických operací //TODO
+	 - **IJA**
+		 - Klondike //TODO
