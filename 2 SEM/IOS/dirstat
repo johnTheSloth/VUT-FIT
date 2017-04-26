@@ -1,0 +1,159 @@
+#!/usr/bin/env bash
+
+DIR="$(pwd)"
+
+REGEX="^$"
+
+if [ "$1" = "-i" ] && [ "$2" ]; then
+REGEX=$2
+elif [ "$2" = "-i" ]; then
+DIR=$1
+REGEX=$3
+elif [ "$1" != "" ] && [ "$1" != "-i" ]; then
+DIR=$1
+elif [ "$3" != "" ] && [ "$1" = "-i" ]; then
+DIR=$3
+REGEX=$2
+fi
+
+
+all_dirs() {
+	cd "$1"
+	DIRS_COUNT=$(find . -type d ! -regex "$REGEX" | wc -w)
+	echo $DIRS_COUNT
+}
+
+all_files() {
+	cd "$1"
+	FILES_COUNT=$(find . -type f ! -regex "$REGEX" | wc -w)
+	echo $FILES_COUNT
+}
+
+all_files_ext() {
+	cd "$1"
+	FILES_COUNT=$(find . -type f -name "*[^.]*.$2" ! -regex "$REGEX" | wc -w)
+	echo $FILES_COUNT
+}
+
+all_files_size() {
+	cd "$1"
+	#ALL_FILES_SIZE=$(find . -type f -printf '%f %s\n' | sed 's/[^ ]* //' |  paste -sd+ | bc)
+	ALL_FILES_SIZE=$(find . -type f ! -regex "$REGEX" -printf '%s\n'|  paste -s -d "+" | bc)
+	echo $ALL_FILES_SIZE
+}
+
+all_files_size_ext() {
+	cd "$1"
+
+	ALL_FILES_SIZE=$(find . -type f  -name "*[^.]*.$2" ! -regex "$REGEX" -printf '%s\n'|  paste -s -d "+" | bc)
+	echo $ALL_FILES_SIZE
+}
+
+largest_file() {
+	cd "$1"
+	LARGEST_PATH=$(find . -type f ! -regex "$REGEX" | xargs ls -1S 2>/dev/null | head -n 1)
+	LARGEST=$(stat 2>/dev/null -c%s $LARGEST_PATH)
+	echo $LARGEST
+}
+
+largest_file_ext() {
+	cd "$1"
+	LARGEST_PATH=$(find . -type f -name "*[^.]*.$2" ! -regex "$REGEX" | xargs ls -1S 2>/dev/null | head -n 1)
+	LARGEST=$(stat 2>/dev/null -c%s $LARGEST_PATH)
+	echo $LARGEST
+}
+
+file_size_median() {
+	COUNT="$(all_files "$1")"
+	cd "$1"
+	if (( $COUNT % 2)); then
+		MEDIANNR=$((($COUNT / 2) + 1))
+		MEDIAN=$(find . -type f ! -regex "$REGEX" -printf '%s\n' | sort -n | head -$MEDIANNR | tail -1)
+		echo $MEDIAN
+	else
+		MEDIANNR=$((($COUNT / 2) + 1))
+		MEDIAN=$(find . -type f ! -regex "$REGEX" -printf '%s\n' | sort -n | head -$MEDIANNR | tail -2 |  paste -sd+ | bc)
+		MEDIAN=$(($MEDIAN / 2))
+		echo $(($MEDIAN / 2))
+	fi
+}
+
+file_size_median_ext() {
+	COUNT="$(all_files_ext "$1" "$2")"
+	cd "$1"
+	if (( $COUNT % 2)); then
+		MEDIANNR=$((($COUNT / 2) + 1))
+		MEDIAN=$(find . -type f -name "*[^.]*.$2" ! -regex "$REGEX" -printf '%s\n' | sort -n | head -$MEDIANNR | tail -1)
+		echo $MEDIAN
+	else
+		MEDIANNR=$((($COUNT / 2) + 1))
+		MEDIAN=$(find . -type f -name "*[^.]*.$2" ! -regex "$REGEX" -printf '%s\n' | sort -n | head -$MEDIANNR | tail -2 |  paste -sd+ | bc)
+		echo $(($MEDIAN / 2))
+	fi
+
+}
+
+max_depth() {
+  cd "$1"
+  maxdepth=0
+  for d in */.; do
+    [ -d "$d" ] || continue
+    depth=`max_depth "$d"`
+    maxdepth=$(($depth > $maxdepth ? $depth : $maxdepth))
+  done
+  echo $((1 + $maxdepth))
+}
+
+find_extensions() {
+	cd "$1"
+	ALL_FILES_EXTENSIONS=$(find . -type f -name "[^.]*.*"  ! -regex "$REGEX" | sed 's|.*\.||' | sort -u)
+	echo $ALL_FILES_EXTENSIONS
+}
+
+DD="$(max_depth "$DIR")"
+ND="$(all_dirs "$DIR")"
+NF="$(all_files "$DIR")"
+if [ "$NF" = 0 ] ; then
+AF="0"
+LAF="N/A"
+AS="N/A"
+MS="N/A"
+elif [ "$NF" != 0 ]; then
+AF="$(($NF / $ND))"
+LAF="$(largest_file "$DIR")"
+AS="$(( $(all_files_size "$DIR") / $NF))"
+MS="$(file_size_median "$DIR")"
+EL="$(find_extensions "$DIR")"
+fi
+
+
+
+
+echo "Root directory: $DIR"
+echo "Directories: $ND"
+echo "Max depth: $DD"
+echo "Average no. of files: $AF"
+echo "All files: $NF"
+echo "  Largest file: $LAF"
+echo "  Average file size: $AS"
+echo "  File size median: $MS"
+if [ "$NF" != 0 ] ; then
+printf "File extensions: " 
+
+echo "$EL" | sed 's/ /,/g'
+fi
+
+
+echo "$EL" | while read line; do
+    for word in $line; do
+        NF="$(all_files_ext "$DIR" "$word")"
+		LF="$(largest_file_ext "$DIR" "$word")"
+		AS="$(( $(all_files_size_ext "$DIR" "$word") / $NF))"
+		MS="$(file_size_median_ext "$DIR" "$word")"
+		echo "Files .$word: $NF"
+		echo "  Largest file .$word: $LF"
+		echo "  Average file size .$word: $AS"
+		echo "  File size median .$word: $MS"
+    done
+done
+
