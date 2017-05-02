@@ -13,7 +13,7 @@ VUT FIT Projekty
 			 - c201 - Jednosměrný lineární seznam
 			 - c202 - Zásobník znaků v poli
 			 - c206 - Dvousměrně vázaný lineární seznam
-		 - DU2: 
+		 - DU2:
 			 - c016 - Tabulka s Rozptýlenými Položkami
 			 - c401 - Rekurzivní implementace operací nad BVS
 			 - c402 - Nerekurzivní implementace operací nad BVS
@@ -26,8 +26,10 @@ VUT FIT Projekty
 	 - **IPP**
 		 - XQR : XML Query
 		 - SYN : Zvýraznění syntaxe //TODO
-	 - **IPK** 
-		 - Klient/server aplikace pro přenos souborů //TODO
+	 - **IPK**
+		 - Klient/server aplikace pro přenos souborů
 		 - Klient pro výpočet matematických operací //TODO
-	 - **IJA**
+   - **IJA**
 		 - Klondike //TODO
+   - **IZG**
+ 		 - Cvičení 01 - 06
