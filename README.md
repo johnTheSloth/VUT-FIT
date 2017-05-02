@@ -32,4 +32,4 @@ VUT FIT Projekty
    - **IJA**
 		 - Klondike //TODO
    - **IZG**
- 		 - Cvičení 01 - 06
+ 		 	- Cvičení 01 - 06
