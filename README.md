@@ -29,7 +29,7 @@ VUT FIT Projekty
 	 - **IPK**
 		 - Klient/server aplikace pro přenos souborů
 		 - Klient pro výpočet matematických operací //TODO
-   - **IJA**
+	 - **IJA**
 		 - Klondike //TODO
-   - **IZG**
- 		 	- Cvičení 01 - 06
+	 - **IZG**
+		 - Cvičení 01-06
