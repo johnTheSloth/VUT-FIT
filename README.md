@@ -3,33 +3,33 @@ VUT FIT Projekty
 
  - Semestr 2
 	 - **INC**
-		 - Přístupový terminál
+		 - [Přístupový terminál](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/INC)
 	 - **IOS**
-		 - dirstat
-		 - rollercoaster
+		 - [dirstat](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/IOS)
+		 - [rollercoaster](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/IOS)
  - Semestr 3
 	 - **IAL**
 		 - DU1:
-			 - c201 - Jednosměrný lineární seznam
-			 - c202 - Zásobník znaků v poli
-			 - c206 - Dvousměrně vázaný lineární seznam
+			 - [c201 - Jednosměrný lineární seznam](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c201.c)
+			 - [c202 - Zásobník znaků v poli](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c202.c)
+			 - [c206 - Dvousměrně vázaný lineární seznam](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c206.c)
 		 - DU2:
-			 - c016 - Tabulka s Rozptýlenými Položkami
-			 - c401 - Rekurzivní implementace operací nad BVS
-			 - c402 - Nerekurzivní implementace operací nad BVS
+			 - [c016 - Tabulka s Rozptýlenými Položkami](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c016.c)
+			 - [c401 - Rekurzivní implementace operací nad BVS](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c401.c)
+			 - [c402 - Nerekurzivní implementace operací nad BVS](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c402.c)
 	 - **INP**
-		 - LED display
-		 - Procesor BrainLove
+		 - [LED display](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/INP/Proj%201)
+		 - [Procesor BrainLove](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/INP/Proj%202%20-%20procesor%20Brainlove)
 	 - **ISS**
-		 - Analýza signálu zvuku
+		 - [Analýza signálu zvuku](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/ISS)
  - Semestr 4
 	 - **IPP**
-		 - XQR : XML Query
+		 - [XQR : XML Query](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPP/XQR)
 		 - SYN : Zvýraznění syntaxe //TODO
 	 - **IPK**
-		 - Klient/server aplikace pro přenos souborů
-		 - Klient pro výpočet matematických operací //TODO
+		 - [Klient/server aplikace pro přenos souborů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/FTP%20client_server)
+		 - [Klient pro výpočet matematických operací](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/math%20client)
 	 - **IJA**
 		 - Klondike //TODO
 	 - **IZG**
-		 - Cvičení 01-06
+		 - [Cvičení 01-06](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG)
