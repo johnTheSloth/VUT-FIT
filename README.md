@@ -1,50 +1,35 @@
-.
-├── 2 SEM
-│   ├── INC
-│   │   ├── accterm.bin
-│   │   ├── fsm.vhd
-│   │   ├── README.md
-│   │   └── zprava.pdf
-│   └── IOS
-│       ├── dirstat
-│       ├── Makefile
-│       ├── proj2.c
-│       └── README.md
-├── 3 SEM
-│   ├── IAL
-│   │   ├── c016.c
-│   │   ├── c201.c
-│   │   ├── c202.c
-│   │   ├── c206.c
-│   │   ├── c401.c
-│   │   └── c402.c
-│   ├── INP
-│   │   ├── Proj 1
-│   │   │   ├── fpga
-│   │   │   │   ├── ledc8x8.ucf
-│   │   │   │   ├── ledc8x8.vhd
-│   │   │   │   └── sim
-│   │   │   │       ├── isim.tcl
-│   │   │   │       └── ledc8x8_tb.vhd
-│   │   │   ├── mcu
-│   │   │   │   └── main.c
-│   │   │   └── project.xml
-│   │   └── Proj 2 - procesor Brainlove
-│   │       ├── cpu.vhd
-│   │       ├── inp.png
-│   │       ├── inp.srp
-│   │       └── login.b
-│   └── ISS
-│       ├── moje_kody.m
-│       ├── README.md
-│       └── xgross09.pdf
-├── 4 SEM
-│   └── IPP
-│       └── XQR
-│           ├── README.md
-│           ├── rozsireni
-│           ├── XQR-doc.pdf
-│           └── xqr.php
-└── README.md
+VUT FIT Projekty
+===================
 
-15 directories, 32 files
+ - Semestr 2
+	 - **INC**
+		 - [Přístupový terminál](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/INC)
+	 - **IOS**
+		 - [dirstat](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/IOS)
+		 - [rollercoaster](https://github.com/johnTheSloth/VUT-FIT/tree/master/2%20SEM/IOS)
+ - Semestr 3
+	 - **IAL**
+		 - DU1:
+			 - [c201 - Jednosměrný lineární seznam](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c201.c)
+			 - [c202 - Zásobník znaků v poli](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c202.c)
+			 - [c206 - Dvousměrně vázaný lineární seznam](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c206.c)
+		 - DU2:
+			 - [c016 - Tabulka s Rozptýlenými Položkami](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c016.c)
+			 - [c401 - Rekurzivní implementace operací nad BVS](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c401.c)
+			 - [c402 - Nerekurzivní implementace operací nad BVS](https://github.com/johnTheSloth/VUT-FIT/blob/master/3%20SEM/IAL/c402.c)
+	 - **INP**
+		 - [LED display](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/INP/Proj%201)
+		 - [Procesor BrainLove](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/INP/Proj%202%20-%20procesor%20Brainlove)
+	 - **ISS**
+		 - [Analýza signálu zvuku](https://github.com/johnTheSloth/VUT-FIT/tree/master/3%20SEM/ISS)
+ - Semestr 4
+	 - **IPP**
+		 - [XQR : XML Query](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPP/XQR)
+		 - SYN : Zvýraznění syntaxe //TODO
+	 - **IPK**
+		 - [Klient/server aplikace pro přenos souborů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/FTP%20client_server)
+		 - [Klient pro výpočet matematických operací](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/math%20client)
+	 - **IJA**
+		 - Klondike //TODO
+	 - **IZG**
+		 - [Cvičení 01-06](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG)

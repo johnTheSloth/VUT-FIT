@@ -1,0 +1,75 @@
+.\" Process this file with
+.\" groff -man -Tascii ipk-client.1
+.\"
+.TH IPK-CLIENT 1 "APRIL 2017" Linux "User Manuals"
+.SH NAME
+ipk-client \- Klient pro výpočet matematických operací
+.SH SYNOPSIS
+.B ./ipk-client ip
+.SH DESCRIPTION
+Klient zahájí komunikaci navázáním TCP spojení se serverem na portu 55555.
+Po navázání spojení zašle klient serveru zprávu HELLO [id]\\n, kde ID je md5 hash
+studentského přihlašovacího jména (login). Server může odpovědět zprávou
+SOLVE [číslo] [operace] [číslo]\\n. Povolené operace jsou +, -, *, /. Klient vypočte
+matematickou operaci a výsledek vrátí ve zprávě RESULT [výsledek]\\n.
+Pokud nebude klient schopný matematickou operaci z nějakého důvodu vyřešit,
+zašle zprávu RESULT ERROR\\n.
+Server může pokračovat další zprávou SOLVE, případně zaslat zprávu BYE [secret]\\n.
+Klient hodnotu secret vypíše na standardní výstup a ukončí spojení.
+Pokud je secret ve formátu UNKNOWN, znamená to, že server nebyl schopen rozpoznat
+zadaný login zaslaný ve zprávě HELLO.
+.SH OPTIONS
+.IP ip
+IP adresa matematického serveru ve tvaru IPv4 nebo IPv6.
+.SH FILES
+.I /ipk-client.cpp
+.RS
+Soubor se zdrojovým kódem pro ipk klient.
+.RE
+.I /ipk-client.h
+.RS
+Hlavičkový soubor pro ipk klient.
+.RE
+.I /md5.cpp
+.RS
+Podpůrná knihovna pro md5 hashování.
+.RE
+.I /md5.h
+.RS
+Hlavičkový soubor pro md5.cpp
+.RE
+.SH DIAGNOSTICS
+Na STDERR mohou být vypsány následující hlášení:
+
+Invalid number of arguments.
+.RS
+Program byl spuštěn s nesprávným počtem argumentů.
+.RE
+Invalid IP address.
+.RS
+IP adresa neodpovídá formátu IPv4 ani IPv6.
+.RE
+Could not open client socket.
+.RS
+Nepodařilo se vytvořit socket.
+.RE
+Couldn't connect to server.
+.RS
+Nepodařilo se připojit k serveru.
+.RE
+HELLO not sent.
+.RS
+Nepodařilo se odeslat zprávu "HELLO md5(LOGIN)"
+.RE
+Couldn't read data from server correctly.
+.RS
+Nepodařilo se získat data ze serveru.
+.RE
+Could not close socket.
+.RS
+Nepodařilo se zavřít socket.
+.RE
+.SH BUGS
+Při přetečení a podtečení Int-u bude výsledkem RESULT ERROR.
+.SH AUTHOR
+Jan Grossmann <xgross at stud.fit.vutbr dot cz>
