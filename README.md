@@ -25,7 +25,7 @@ VUT FIT Projekty
  - Semestr 4
 	 - **IPP**
 		 - [XQR : XML Query](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPP/XQR)
-		 - SYN : Zvýraznění syntaxe //TODO
+		 - [SYN : Zvýraznění syntaxe](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPP/SYN)
 	 - **IPK**
 		 - [Klient/server aplikace pro přenos souborů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/FTP%20client_server)
 		 - [Klient pro výpočet matematických operací](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/math%20client)
