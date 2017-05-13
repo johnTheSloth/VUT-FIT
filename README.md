@@ -33,3 +33,4 @@ VUT FIT Projekty
 		 - Klondike //TODO
 	 - **IZG**
 		 - [Cvičení 01-06](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG)
+		 - [Projekt: Vykreslovací řetězec a programování shaderů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG/projekt)
