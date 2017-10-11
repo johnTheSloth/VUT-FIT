@@ -1,4 +1,4 @@
-## IJA Klondike
+## IJA Klondike 90/90
 **Zadání:** Navrhněte a implementujte aplikaci Pasians (Solitaire) Klondike, která vychází ze stejnojmenné karetní hry.
 **Poznámka:** Zadání definuje podstatné vlastnosti aplikace, které musí být splněny. Předpokládá se, že detaily řešení si doplní řešitelské týmy. 
 
