@@ -30,7 +30,7 @@ VUT FIT Projekty
 		 - [Klient/server aplikace pro přenos souborů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/FTP%20client_server)
 		 - [Klient pro výpočet matematických operací](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IPK/math%20client)
 	 - **IJA**
-		 - Klondike //TODO
+		 - [Klondike](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IJA/Klondike)
 	 - **IZG**
 		 - [Cvičení 01-06](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG)
 		 - [Projekt: Vykreslovací řetězec a programování shaderů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG/projekt)
