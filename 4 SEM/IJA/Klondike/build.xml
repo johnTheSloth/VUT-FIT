@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project>
+    <target name="clean">
+          <delete includeemptydirs="true">
+        <fileset dir="build" includes="**/*"/>
+      </delete>
+          <delete includeemptydirs="true">
+        <fileset dir="dest-client" includes="**/*"/>
+      </delete>
+          <delete includeemptydirs="true">
+        <fileset dir="doc" includes="**/*"/>
+      </delete>
+    </target>
+
+    <target name="compile" description="compile java sources">
+        <!-- Complile classes -->
+      <javac srcdir="src" destdir="build" />
+      <!-- Generate Docs -->
+      <javadoc sourcepath="src" destdir="doc" />
+      <!-- Make .jar -->
+      <jar destfile="dest-client/ija-client.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="ija.ija2016.core"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="dest-client/ija-client.jar" fork="true"/>
+    </target>
+
+
+</project>
