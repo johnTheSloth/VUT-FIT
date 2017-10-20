@@ -36,9 +36,7 @@ VUT FIT Projekty
 		 - [Projekt: Vykreslovací řetězec a programování shaderů](https://github.com/johnTheSloth/VUT-FIT/tree/master/4%20SEM/IZG/projekt)
  - Semestr 5
 	 - **ITU**
-		 - [Cvičení 01](https://github.com/johnTheSloth/VUT-FIT/tree/master/5%20SEM/ITU/cv%201)
-		 - [Cvičení 02 - WinApi](https://github.com/johnTheSloth/VUT-FIT/tree/master/5%20SEM/ITU/cv%202%20WinApi)
-		 - [Cvičení 03 - Qt](https://github.com/johnTheSloth/VUT-FIT/tree/master/5%20SEM/ITU/cv%203%20Qt)
+		 - [Cvičení 01-03](https://github.com/johnTheSloth/VUT-FIT/tree/master/5%20SEM/ITU)
 	 - **IMP**
 		 - [Cvičení 01 - Odesílání znaku na terminál](https://github.com/johnTheSloth/VUT-FIT/tree/master/5%20SEM/IMP/cv1%20RecvChar)
 	 - **IW1**
